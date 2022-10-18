@@ -1,0 +1,15 @@
+name: ci
+on:
+  push:
+    branches:
+      - main
+jobs:
+  testing:
+    name: testing CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: kr-research/demo-ghaction@v1.0.0
+        with:
+          branch-name: "Example Branch Name"
+          example: "Environment variable"
