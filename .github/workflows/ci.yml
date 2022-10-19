@@ -8,8 +8,19 @@ jobs:
     name: testing CI
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: kr-research/demo-ghaction@v1.0.0
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: Checkout private action
+        uses: actions/checkout@v3
+        with:
+          repository: kr-research/demo-ghaction
+          ref: refs/heads/master
+          persist-credentials: false
+          path: ./.github/actions/awesome-action
+      - name: Using awesome action
+        uses: ./.github/actions/awesome-action
         with:
           branch-name: "Example Branch Name"
           example: "Environment variable"
