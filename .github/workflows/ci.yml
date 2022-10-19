@@ -19,6 +19,8 @@ jobs:
           ref: refs/heads/master
           persist-credentials: false
           path: ./.github/actions/demo-ghaction
+          lfs: true
+          token: ${{ secrets.GHPAT }}
       - name: Using awesome action
         uses: ./.github/actions/demo-ghaction
         with:
