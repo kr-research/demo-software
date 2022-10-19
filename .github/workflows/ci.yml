@@ -18,9 +18,9 @@ jobs:
           repository: kr-research/demo-ghaction
           ref: refs/heads/master
           persist-credentials: false
-          path: ./.github/actions/awesome-action
+          path: ./.github/actions/demo-ghaction
       - name: Using awesome action
-        uses: ./.github/actions/awesome-action
+        uses: ./.github/actions/demo-ghaction
         with:
           branch-name: "Example Branch Name"
           example: "Environment variable"
