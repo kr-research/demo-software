@@ -21,10 +21,6 @@ jobs:
           path: ./.github/actions/demo-ghaction
           lfs: true
           token: ${{ secrets.GHPAT }}
-      - name: Check current path
-        run: pwd
-      - name: Check action content
-        run: ls -la ./.github/actions/demo-ghaction
       - name: Using awesome action
         uses: ./.github/actions/demo-ghaction
         with:
