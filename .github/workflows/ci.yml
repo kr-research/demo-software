@@ -13,7 +13,7 @@ jobs:
         with:
           path: main
       - name: Checkout private action
-        uses: aactions/checkout@v3.1.0
+        uses: actions/checkout@v3.1.0
         with:
           repository: kr-research/demo-ghaction
           ref: refs/heads/master
