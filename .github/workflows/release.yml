@@ -1,7 +1,11 @@
 on:
-  push:
+  workflow_run:
+    workflows:
+      - ci
     branches:
       - main
+    types:
+      - completed
 name: Release
 jobs:
   release:
