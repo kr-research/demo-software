@@ -1,5 +1,9 @@
 #!/bin/bash
 
+function HolaMundo {
+  echo "hola mundo"
+}
+
 function newElement {
   echo 'Hola'
 }
